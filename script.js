@@ -4,8 +4,11 @@
   var nav = document.getElementById('nav');
 
   // Sticky header shadow
+  var wa = document.querySelector('.wa-float');
+  var heroEl = document.getElementById('top');
   function onScroll() {
     header.classList.toggle('is-scrolled', window.scrollY > 8);
+    if (wa && heroEl) wa.classList.toggle('is-hidden', window.scrollY < heroEl.offsetHeight * 0.6);
   }
   window.addEventListener('scroll', onScroll, { passive: true });
   onScroll();
@@ -81,6 +84,91 @@
       });
     });
   });
+
+  // Hero slider
+  (function () {
+    var root = document.getElementById('heroSlider');
+    if (!root) return;
+    var hero = root.closest('.hero');
+    var slides = root.querySelectorAll('.slide');
+    var tabs = root.querySelectorAll('.stab');
+    var pauseBtn = document.getElementById('sPause');
+    var DURATION = 7000;
+    var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var current = 0, elapsed = 0, last = null, hovering = false, focused = false, userPaused = reduce;
+
+    function setInert(el, on) {
+      if (on) { el.setAttribute('inert', ''); el.setAttribute('aria-hidden', 'true'); }
+      else { el.removeAttribute('inert'); el.removeAttribute('aria-hidden'); }
+    }
+
+    function go(i) {
+      i = (i + slides.length) % slides.length;
+      slides.forEach(function (s, k) {
+        s.classList.toggle('is-active', k === i);
+        setInert(s, k !== i);
+      });
+      tabs.forEach(function (t, k) {
+        t.classList.toggle('is-active', k === i);
+        t.classList.toggle('is-done', k < i);
+        t.setAttribute('aria-selected', String(k === i));
+        t.querySelector('i').style.width = k < i ? '100%' : '0';
+      });
+      hero.style.setProperty('--glow', slides[i].getAttribute('data-glow'));
+      current = i;
+      elapsed = 0;
+    }
+
+    function running() { return !userPaused && !hovering && !focused && !document.hidden; }
+
+    function tick(t) {
+      if (last !== null && running()) {
+        elapsed += t - last;
+        var bar = tabs[current].querySelector('i');
+        bar.style.width = Math.min(100, (elapsed / DURATION) * 100) + '%';
+        if (elapsed >= DURATION) go(current + 1);
+      }
+      last = t;
+      requestAnimationFrame(tick);
+    }
+
+    function setPaused(p) {
+      userPaused = p;
+      pauseBtn.setAttribute('aria-pressed', String(p));
+      pauseBtn.setAttribute('aria-label', p ? 'Otomatik geçişi başlat' : 'Otomatik geçişi durdur');
+    }
+
+    tabs.forEach(function (t) {
+      t.addEventListener('click', function () { go(+t.getAttribute('data-go')); });
+    });
+    document.getElementById('sPrev').addEventListener('click', function () { go(current - 1); });
+    document.getElementById('sNext').addEventListener('click', function () { go(current + 1); });
+    pauseBtn.addEventListener('click', function () { setPaused(!userPaused); });
+
+    root.addEventListener('mouseenter', function () { hovering = true; });
+    root.addEventListener('mouseleave', function () { hovering = false; });
+    root.addEventListener('focusin', function (e) { focused = !e.target.closest('.slider__ui'); });
+    root.addEventListener('focusout', function () { focused = false; });
+    root.addEventListener('keydown', function (e) {
+      if (e.key === 'ArrowRight') { go(current + 1); }
+      else if (e.key === 'ArrowLeft') { go(current - 1); }
+    });
+
+    // Swipe
+    var startX = null, startY = null;
+    var area = root.querySelector('.slides');
+    area.addEventListener('pointerdown', function (e) { startX = e.clientX; startY = e.clientY; });
+    area.addEventListener('pointerup', function (e) {
+      if (startX === null) return;
+      var dx = e.clientX - startX, dy = e.clientY - startY;
+      if (Math.abs(dx) > 50 && Math.abs(dx) > Math.abs(dy)) go(current + (dx < 0 ? 1 : -1));
+      startX = null;
+    });
+
+    setPaused(userPaused);
+    go(0);
+    requestAnimationFrame(tick);
+  })();
 
   // Product inquiry -> prefill contact form
   document.querySelectorAll('[data-ask]').forEach(function (btn) {

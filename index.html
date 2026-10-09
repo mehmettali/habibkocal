@@ -84,57 +84,235 @@
   </header>
 
   <main id="main">
-    <!-- HERO -->
-    <section class="hero" id="top">
+    <!-- HERO SLIDER -->
+    <section class="hero" id="top" aria-roledescription="carousel" aria-label="Öne çıkanlar">
       <div class="hero__bg" aria-hidden="true"></div>
-      <div class="container hero__inner">
-        <div class="hero__copy reveal">
-          <p class="eyebrow">Rize'den dünyaya · 2008'den bu yana</p>
-          <h1>Balın sırrını <em>bilimle</em> buluşturan isim.</h1>
-          <p class="lead">
-            Habib Koçal; kapsül bal projesiyle tanınan, kestane balının fermantasyonu üzerine yıllarını
-            AR-GE'ye adamış Rizeli bir mucit ve girişimci. Çalışmalarının sonucu olan <strong>Andon</strong>
-            markalı fermente kestane balı takviye edici gıdalar, Bakanlık onayıyla sunuluyor.
-          </p>
-          <div class="hero__cta">
-            <a href="#urunler" class="btn btn--honey">Ürünleri İnceleyin</a>
-            <a href="#hakkinda" class="btn btn--ghost">Hikâyeyi Okuyun</a>
-          </div>
+      <div class="hero__grain" aria-hidden="true"></div>
+
+      <div class="slider" id="heroSlider">
+        <div class="slides">
+
+          <!-- 1. Andon -->
+          <article class="slide is-active" role="group" aria-roledescription="slide" aria-label="1 / 5: Andon" data-glow="224,168,58">
+            <div class="container slide__inner">
+              <div class="slide__copy">
+                <p class="eyebrow">Rize'den dünyaya · 2008'den bu yana</p>
+                <h1 class="slide__title">Balın sırrını <em>bilimle</em> buluşturan isim.</h1>
+                <p class="lead">
+                  Kestane balının fermantasyonu üzerine yıllarını AR-GE'ye adamış Rizeli mucit Habib Koçal'ın
+                  çalışmaları, <strong>Andon</strong> markalı ve Bakanlık onaylı takviye edici gıdalarla sofranıza geliyor.
+                </p>
+                <div class="hero__cta">
+                  <a href="#urunler" class="btn btn--honey">Ürünleri İnceleyin</a>
+                  <a href="#hakkinda" class="btn btn--ghost">Hikâyeyi Okuyun</a>
+                </div>
+              </div>
+              <div class="slide__visual" aria-hidden="true">
+                <svg viewBox="0 0 400 420" class="art">
+                  <defs>
+                    <linearGradient id="hg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f3c463"/><stop offset="1" stop-color="#b8741a"/></linearGradient>
+                    <radialGradient id="drop" cx=".4" cy=".35" r=".7"><stop offset="0" stop-color="#ffe3a3"/><stop offset=".55" stop-color="#e0a83a"/><stop offset="1" stop-color="#9a5c10"/></radialGradient>
+                  </defs>
+                  <g fill="none" stroke="#e0a83a" stroke-opacity=".35" stroke-width="2">
+                    <path d="M200 30l60 34.6v69.3L200 168.5l-60-34.6V64.6z"/>
+                    <path d="M320 99l60 34.6v69.3L320 237.5l-60-34.6v-69.3z"/>
+                    <path d="M80 99l60 34.6v69.3L80 237.5l-60-34.6v-69.3z"/>
+                    <path d="M320 237.5l60 34.6v69.3L320 376l-60-34.6v-69.3z"/>
+                    <path d="M80 237.5l60 34.6v69.3L80 376l-60-34.6v-69.3z"/>
+                    <path d="M200 306.5l60 34.6v69.3"/><path d="M200 306.5l-60 34.6v69.3"/>
+                  </g>
+                  <path class="float-a" d="M200 30l60 34.6v69.3L200 168.5l-60-34.6V64.6z" fill="url(#hg)" opacity=".18"/>
+                  <path class="float-b" d="M320 99l60 34.6v69.3L320 237.5l-60-34.6v-69.3z" fill="url(#hg)" opacity=".5"/>
+                  <path class="float-a" d="M80 237.5l60 34.6v69.3L80 376l-60-34.6v-69.3z" fill="url(#hg)" opacity=".3"/>
+                  <path d="M200 168.5l60 34.6v69.3L200 306.5l-60-34.6v-69.3z" fill="url(#hg)"/>
+                  <path class="drip" d="M200 300c0 0-22 30-22 46a22 22 0 0044 0c0-16-22-46-22-46z" fill="url(#drop)"/>
+                  <g fill="#14110d" text-anchor="middle">
+                    <text x="200" y="236" font-size="30" font-style="italic" font-family="Fraunces, Georgia, serif">Andon</text>
+                    <text x="200" y="256" font-size="8.5" font-family="Inter, sans-serif" font-weight="600" letter-spacing="1.4">FERMENTE</text>
+                    <text x="200" y="268" font-size="8.5" font-family="Inter, sans-serif" font-weight="600" letter-spacing="1.4">KESTANE BALI</text>
+                  </g>
+                </svg>
+              </div>
+            </div>
+          </article>
+
+          <!-- 2. Mühürlü Bal -->
+          <article class="slide" role="group" aria-roledescription="slide" aria-label="2 / 5: Andon Mühürlü Bal" data-glow="214,120,40">
+            <div class="container slide__inner">
+              <div class="slide__copy">
+                <p class="eyebrow">Andon yaylalarından · 770 m</p>
+                <h2 class="slide__title">Her kavanozda <em>analiz raporu</em>.</h2>
+                <p class="lead">
+                  Rize'nin 150 yıllık Andon köyünden, kestane ormanları arasından sınırlı miktarda hasat edilen
+                  <strong>Andon Mühürlü Bal</strong>; laboratuvar raporuyla, mühürlü kavanozda.
+                </p>
+                <div class="hero__cta">
+                  <button type="button" class="btn btn--honey" data-ask="Andon Mühürlü Bal">Sipariş &amp; Bilgi</button>
+                  <a href="#andon" class="btn btn--ghost">Andon'u Tanıyın</a>
+                </div>
+              </div>
+              <div class="slide__visual" aria-hidden="true">
+                <svg viewBox="0 0 400 420" class="art">
+                  <defs>
+                    <linearGradient id="hill" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3a2a12"/><stop offset="1" stop-color="#1a140c"/></linearGradient>
+                    <linearGradient id="jar" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#e9a53e"/><stop offset="1" stop-color="#8a4f0e"/></linearGradient>
+                  </defs>
+                  <circle class="float-b" cx="300" cy="90" r="34" fill="#e0a83a" opacity=".85"/>
+                  <path d="M0 300l70-80 50 40 70-110 80 100 50-40 80 90v120H0z" fill="url(#hill)"/>
+                  <path d="M0 330l90-60 70 50 90-70 150 90v80H0z" fill="#241a0e"/>
+                  <g fill="#3f6b35" opacity=".7"><path d="M60 300l10-30 10 30z"/><path d="M90 310l10-34 10 34z"/><path d="M300 300l10-30 10 30z"/><path d="M330 312l10-34 10 34z"/></g>
+                  <g class="float-a">
+                    <rect x="142" y="120" width="116" height="26" rx="6" fill="#14110d"/>
+                    <rect x="134" y="146" width="132" height="176" rx="22" fill="url(#jar)"/>
+                    <rect x="134" y="146" width="132" height="50" rx="22" fill="#fff" opacity=".12"/>
+                    <rect x="152" y="206" width="96" height="74" rx="6" fill="#faf6ee"/>
+                    <text x="200" y="236" text-anchor="middle" font-family="Fraunces, Georgia, serif" font-style="italic" font-size="22" fill="#14110d">Andon</text>
+                    <text x="200" y="256" text-anchor="middle" font-family="Inter, sans-serif" font-size="8.5" font-weight="700" letter-spacing="1.4" fill="#b8741a">MÜHÜRLÜ BAL</text>
+                    <text x="200" y="270" text-anchor="middle" font-family="Inter, sans-serif" font-size="7" fill="#6b6255">ANALİZ RAPORLU</text>
+                    <circle cx="246" cy="134" r="18" fill="#a8321f"/>
+                    <circle cx="246" cy="134" r="11" fill="none" stroke="#fff" stroke-opacity=".55" stroke-width="1.5"/>
+                    <text x="246" y="138" text-anchor="middle" font-family="Fraunces, Georgia, serif" font-style="italic" font-size="10" fill="#fff">HK</text>
+                  </g>
+                </svg>
+              </div>
+            </div>
+          </article>
+
+          <!-- 3. Bilim -->
+          <article class="slide" role="group" aria-roledescription="slide" aria-label="3 / 5: Bilim" data-glow="120,170,210">
+            <div class="container slide__inner">
+              <div class="slide__copy">
+                <p class="eyebrow">HB01 · 2 patent başvurusu</p>
+                <h2 class="slide__title">Genom haritası, <em>herkese açık</em>.</h2>
+                <p class="lead">
+                  Kendi bal mayamız <strong>HB01</strong>'in 16S ve ITS genetik haritalarını bilim dünyasının incelemesine sunduk.
+                  Fermente bal mayası ve sıvı probiyotikler üzerine iki patent başvurusu yayımlandı.
+                </p>
+                <div class="hero__cta">
+                  <a href="#arge" class="btn btn--honey">Genetik Haritalar</a>
+                  <a href="#belgeler" class="btn btn--ghost">Patent &amp; Belgeler</a>
+                </div>
+              </div>
+              <div class="slide__visual" aria-hidden="true">
+                <svg viewBox="0 0 400 420" class="art">
+                  <g class="spin-slow" style="transform-origin:200px 210px">
+                    <circle cx="200" cy="210" r="170" fill="none" stroke="#e0a83a" stroke-opacity=".18" stroke-dasharray="4 10"/>
+                    <circle cx="200" cy="210" r="130" fill="none" stroke="#78aad2" stroke-opacity=".2"/>
+                  </g>
+                  <g class="helix">
+                    <path d="M150 60c100 50 0 100 100 150s0 100 -100 150" fill="none" stroke="#e0a83a" stroke-width="5" stroke-linecap="round"/>
+                    <path d="M250 60c-100 50 0 100 -100 150s0 100 100 150" fill="none" stroke="#78aad2" stroke-width="5" stroke-linecap="round"/>
+                    <g stroke="#faf6ee" stroke-opacity=".55" stroke-width="3" stroke-linecap="round">
+                      <path d="M170 82h60"/><path d="M190 118h20"/><path d="M168 160h64"/><path d="M190 196h20"/>
+                      <path d="M168 236h64"/><path d="M190 272h20"/><path d="M170 314h60"/><path d="M190 340h20"/>
+                    </g>
+                  </g>
+                  <g font-family="Inter, sans-serif" font-weight="700" font-size="12" letter-spacing="2">
+                    <rect x="36" y="88" width="78" height="30" rx="15" fill="#14110d" stroke="#e0a83a"/>
+                    <text x="75" y="108" text-anchor="middle" fill="#e0a83a">HB01</text>
+                    <rect x="286" y="296" width="78" height="30" rx="15" fill="#14110d" stroke="#78aad2"/>
+                    <text x="325" y="316" text-anchor="middle" fill="#78aad2">16S·ITS</text>
+                  </g>
+                </svg>
+              </div>
+            </div>
+          </article>
+
+          <!-- 4. İklim -->
+          <article class="slide" role="group" aria-roledescription="slide" aria-label="4 / 5: İklim projesi" data-glow="110,170,100">
+            <div class="container slide__inner">
+              <div class="slide__copy">
+                <p class="eyebrow">AR-GE · 2025</p>
+                <h2 class="slide__title">Rize'nin mikroorganizmaları, <em>toprak ve su</em> için.</h2>
+                <p class="lead">
+                  <strong>HB03</strong> toprağın mikrobiyal dengesini, <strong>HB010</strong> yağış oluşumunu,
+                  <strong>HB07</strong> havadaki mikroorganizma dengesini hedefliyor. Prof. Dr. Serkan Naci Koç
+                  danışmanlığında yürütülen proje için ilk saha denemeleri planlanıyor.
+                </p>
+                <div class="hero__cta">
+                  <button type="button" class="btn btn--honey" data-ask="HB03 / HB07 / HB010 iklim projesi (iş birliği)">İş Birliği Kurun</button>
+                  <a href="#urunler" class="btn btn--ghost">Projeyi İnceleyin</a>
+                </div>
+              </div>
+              <div class="slide__visual" aria-hidden="true">
+                <svg viewBox="0 0 400 420" class="art">
+                  <g class="float-a">
+                    <path d="M110 170a46 46 0 018-91 62 62 0 01117-10 44 44 0 0127 86z" fill="#faf6ee" opacity=".92"/>
+                    <path d="M150 140a34 34 0 016-66 46 46 0 0186-8" fill="none" stroke="#e0a83a" stroke-width="3" opacity=".6"/>
+                  </g>
+                  <g class="rain" stroke="#78aad2" stroke-width="4" stroke-linecap="round">
+                    <path d="M140 190l-8 22"/><path d="M180 196l-8 22"/><path d="M220 190l-8 22"/><path d="M260 196l-8 22"/>
+                    <path d="M160 228l-8 22"/><path d="M200 234l-8 22"/><path d="M240 228l-8 22"/>
+                  </g>
+                  <path d="M20 330c60-24 110 10 180 0s120-24 180 0v90H20z" fill="#4a3417"/>
+                  <path d="M20 342c60-20 110 10 180 0s120-20 180 0" fill="none" stroke="#7fb069" stroke-width="3"/>
+                  <g class="grow" style="transform-origin:200px 330px">
+                    <path d="M200 330v-62" stroke="#7fb069" stroke-width="5" stroke-linecap="round"/>
+                    <path d="M200 292c-26-2-36-20-36-36 20 0 36 12 36 36zM200 280c22-2 32-20 32-34-18 0-32 12-32 34z" fill="#7fb069"/>
+                  </g>
+                  <g fill="#e0a83a"><circle cx="80" cy="372" r="4"/><circle cx="120" cy="384" r="3"/><circle cx="290" cy="376" r="4"/><circle cx="330" cy="388" r="3"/></g>
+                  <g font-family="Inter, sans-serif" font-weight="700" font-size="11" letter-spacing="1.5">
+                    <text x="300" y="70" fill="#78aad2">HB010</text><text x="40" y="250" fill="#e0a83a">HB07</text><text x="300" y="300" fill="#7fb069">HB03</text>
+                  </g>
+                </svg>
+              </div>
+            </div>
+          </article>
+
+          <!-- 5. Rize Kahvesi -->
+          <article class="slide" role="group" aria-roledescription="slide" aria-label="5 / 5: Rize Kahvesi" data-glow="170,100,50">
+            <div class="container slide__inner">
+              <div class="slide__copy">
+                <p class="eyebrow">Yakında · 2027</p>
+                <h2 class="slide__title">Çaydan doğan yerli kahve: <em>Rize Kahvesi</em>.</h2>
+                <p class="lead">
+                  Rize çayından elde edilen kafein, probiyotik işlemle kahveye dönüşüyor. Toz ve sıvı formda,
+                  iki yıllık raf ömrü çalışmasıyla; ithalata yerli bir alternatif.
+                </p>
+                <div class="hero__cta">
+                  <button type="button" class="btn btn--honey" data-ask="Rize Kahvesi (ön bilgi / bayilik)">İlk Siz Haberdar Olun</button>
+                  <a href="#bayilik" class="btn btn--ghost">Bayilik</a>
+                </div>
+              </div>
+              <div class="slide__visual" aria-hidden="true">
+                <svg viewBox="0 0 400 420" class="art">
+                  <defs><linearGradient id="cup" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#faf6ee"/><stop offset="1" stop-color="#e6dccb"/></linearGradient></defs>
+                  <g class="steam" fill="none" stroke="#e0a83a" stroke-width="4" stroke-linecap="round" opacity=".75">
+                    <path d="M160 120c-14-18 14-28 0-50"/><path d="M200 112c-14-18 14-28 0-50"/><path d="M240 120c-14-18 14-28 0-50"/>
+                  </g>
+                  <ellipse cx="200" cy="350" rx="150" ry="20" fill="#000" opacity=".3"/>
+                  <ellipse cx="200" cy="336" rx="140" ry="22" fill="#e6dccb"/>
+                  <path d="M100 160h200v90a90 90 0 01-90 90h-20a90 90 0 01-90-90z" fill="url(#cup)"/>
+                  <path d="M300 182h20a38 38 0 010 76h-28" fill="none" stroke="#e6dccb" stroke-width="14"/>
+                  <ellipse cx="200" cy="162" rx="100" ry="16" fill="#4a2a12"/>
+                  <ellipse cx="190" cy="160" rx="40" ry="5" fill="#7a4a24" opacity=".7"/>
+                  <g class="float-b">
+                    <path d="M200 268c16-28 52-28 64 0-12 28-48 28-64 0z" fill="#7fb069"/>
+                    <path d="M200 268h64" stroke="#3f6b35" stroke-width="2"/>
+                  </g>
+                  <text x="160" y="250" text-anchor="middle" font-family="Fraunces, Georgia, serif" font-style="italic" font-size="20" fill="#4a2a12">Rize</text>
+                </svg>
+              </div>
+            </div>
+          </article>
         </div>
 
-        <div class="hero__visual reveal" aria-hidden="true">
-          <svg viewBox="0 0 400 420" class="honeycomb">
-            <defs>
-              <linearGradient id="hg" x1="0" y1="0" x2="1" y2="1">
-                <stop offset="0" stop-color="#f3c463"/>
-                <stop offset="1" stop-color="#b8741a"/>
-              </linearGradient>
-              <radialGradient id="drop" cx=".4" cy=".35" r=".7">
-                <stop offset="0" stop-color="#ffe3a3"/>
-                <stop offset=".55" stop-color="#e0a83a"/>
-                <stop offset="1" stop-color="#9a5c10"/>
-              </radialGradient>
-            </defs>
-            <g fill="none" stroke="#e0a83a" stroke-opacity=".35" stroke-width="2">
-              <path d="M200 30l60 34.6v69.3L200 168.5l-60-34.6V64.6z"/>
-              <path d="M320 99l60 34.6v69.3L320 237.5l-60-34.6v-69.3z"/>
-              <path d="M80 99l60 34.6v69.3L80 237.5l-60-34.6v-69.3z"/>
-              <path d="M320 237.5l60 34.6v69.3L320 376l-60-34.6v-69.3z"/>
-              <path d="M80 237.5l60 34.6v69.3L80 376l-60-34.6v-69.3z"/>
-              <path d="M200 306.5l60 34.6v69.3"/>
-              <path d="M200 306.5l-60 34.6v69.3"/>
-            </g>
-            <path d="M200 168.5l60 34.6v69.3L200 306.5l-60-34.6v-69.3z" fill="url(#hg)"/>
-            <path d="M200 30l60 34.6v69.3L200 168.5l-60-34.6V64.6z" fill="url(#hg)" opacity=".18"/>
-            <path d="M320 99l60 34.6v69.3L320 237.5l-60-34.6v-69.3z" fill="url(#hg)" opacity=".5"/>
-            <path d="M80 237.5l60 34.6v69.3L80 376l-60-34.6v-69.3z" fill="url(#hg)" opacity=".3"/>
-            <path class="drip" d="M200 300c0 0-22 30-22 46a22 22 0 0044 0c0-16-22-46-22-46z" fill="url(#drop)"/>
-            <g fill="#14110d" font-family="Fraunces, Georgia, serif" text-anchor="middle">
-              <text x="200" y="236" font-size="30" font-style="italic">Andon</text>
-              <text x="200" y="256" font-size="8.5" font-family="Inter, sans-serif" font-weight="600" letter-spacing="1.4">FERMENTE</text>
-              <text x="200" y="268" font-size="8.5" font-family="Inter, sans-serif" font-weight="600" letter-spacing="1.4">KESTANE BALI</text>
-            </g>
-          </svg>
+        <div class="container slider__ui">
+          <div class="slider__tabs" role="tablist" aria-label="Slaytlar">
+            <button role="tab" class="stab is-active" aria-selected="true" data-go="0"><span class="stab__n">01</span><span class="stab__l">Andon</span><span class="stab__bar"><i></i></span></button>
+            <button role="tab" class="stab" aria-selected="false" data-go="1"><span class="stab__n">02</span><span class="stab__l">Mühürlü Bal</span><span class="stab__bar"><i></i></span></button>
+            <button role="tab" class="stab" aria-selected="false" data-go="2"><span class="stab__n">03</span><span class="stab__l">Bilim</span><span class="stab__bar"><i></i></span></button>
+            <button role="tab" class="stab" aria-selected="false" data-go="3"><span class="stab__n">04</span><span class="stab__l">İklim</span><span class="stab__bar"><i></i></span></button>
+            <button role="tab" class="stab" aria-selected="false" data-go="4"><span class="stab__n">05</span><span class="stab__l">Rize Kahvesi</span><span class="stab__bar"><i></i></span></button>
+          </div>
+          <div class="slider__nav">
+            <button class="snav" id="sPause" aria-label="Otomatik geçişi durdur" aria-pressed="false">
+              <svg viewBox="0 0 24 24" class="i-pause"><path d="M8 5v14M16 5v14" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>
+              <svg viewBox="0 0 24 24" class="i-play"><path d="M8 5l11 7-11 7z" fill="currentColor"/></svg>
+            </button>
+            <button class="snav" id="sPrev" aria-label="Önceki slayt"><svg viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+            <button class="snav" id="sNext" aria-label="Sonraki slayt"><svg viewBox="0 0 24 24"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+          </div>
         </div>
       </div>
 
