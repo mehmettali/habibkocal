@@ -85,6 +85,62 @@
     });
   });
 
+  // Scroll progress
+  var bar = document.getElementById('progressBar');
+  function onProgress() {
+    var h = document.documentElement.scrollHeight - innerHeight;
+    bar.style.transform = 'scaleX(' + (h > 0 ? scrollY / h : 0) + ')';
+  }
+  window.addEventListener('scroll', onProgress, { passive: true });
+  onProgress();
+
+  // Count-up numbers
+  var counters = document.querySelectorAll('[data-count]');
+  var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if ('IntersectionObserver' in window && !reduceMotion) {
+    var co = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (!e.isIntersecting) return;
+        co.unobserve(e.target);
+        var el = e.target, end = +el.getAttribute('data-count'), t0 = null;
+        (function step(t) {
+          if (!t0) t0 = t;
+          var p = Math.min(1, (t - t0) / 1400);
+          el.textContent = Math.round(end * (1 - Math.pow(1 - p, 3)));
+          if (p < 1) requestAnimationFrame(step);
+        })(performance.now());
+      });
+    }, { threshold: 0.5 });
+    counters.forEach(function (el) { el.textContent = '0'; co.observe(el); });
+  }
+
+  // Science library search + filter
+  var libItems = document.querySelectorAll('#library li');
+  var libSearch = document.getElementById('libSearch');
+  var libFilters = document.querySelectorAll('.lf');
+  var libEmpty = document.getElementById('libEmpty');
+  var libType = 'all';
+  function norm(s) { return s.toLocaleLowerCase('tr').replace(/ı/g, 'i'); }
+  function applyLib() {
+    var q = norm(libSearch.value.trim()), shown = 0;
+    libItems.forEach(function (li) {
+      var ok = (libType === 'all' || li.getAttribute('data-type') === libType) && norm(li.textContent).indexOf(q) !== -1;
+      li.hidden = !ok;
+      if (ok) shown++;
+    });
+    libEmpty.hidden = shown > 0;
+  }
+  if (libSearch) {
+    libSearch.addEventListener('input', applyLib);
+    libFilters.forEach(function (b) {
+      b.addEventListener('click', function () {
+        libType = b.getAttribute('data-type');
+        libFilters.forEach(function (x) { x.classList.toggle('is-active', x === b); });
+        applyLib();
+      });
+    });
+  }
+
   // Hero slider
   (function () {
     var root = document.getElementById('heroSlider');

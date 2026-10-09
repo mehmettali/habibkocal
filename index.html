@@ -60,6 +60,7 @@
     <p>Görünen her şeyin sırrı, bir zerrenin sırrında saklıdır.</p>
   </div>
 
+  <div class="progress" aria-hidden="true"><i id="progressBar"></i></div>
   <header class="header" id="header">
     <div class="container header__inner">
       <a href="#top" class="brand" aria-label="Habib Koçal ana sayfa">
@@ -74,10 +75,11 @@
       <nav class="nav" id="nav" aria-label="Ana menü">
         <a href="#hakkinda">Hakkında</a>
         <a href="#urunler">Ürünler</a>
-        <a href="#arge">AR-GE</a>
+        <a href="#arge">Bilim</a>
         <a href="#belgeler">Belgeler</a>
         <a href="#basin">Basında</a>
         <a href="#bayilik">Bayilik</a>
+        <a href="#sss">SSS</a>
         <a href="#iletisim" class="btn btn--sm btn--honey">İletişim</a>
       </nav>
     </div>
@@ -597,39 +599,212 @@
       </div>
     </section>
 
-    <!-- AR-GE -->
-    <section class="section section--dark" id="arge">
+    <!-- BİLİM -->
+    <section class="section section--dark science" id="arge">
+      <div class="science__bg" aria-hidden="true"></div>
       <div class="container">
         <header class="section__head reveal">
-          <p class="eyebrow">AR-GE &amp; Bilim</p>
-          <h2>Genom haritası, herkese açık.</h2>
+          <p class="eyebrow">Bilim &amp; AR-GE</p>
+          <h2>Bir zerreden başlayan bilim.</h2>
           <p>
-            Ürünlerdeki bakteri çeşitliliğini ve bu çeşitliliğin sayısal değerlerini bilim insanlarının şeffafça
-            inceleyebilmesi için DNA genetik haritalarını e-katalog olarak yayımlıyoruz. 2010'da başlayan proje
-            7 yıllık AR-GE ve 3 yıllık ruhsatlandırma sürecinden geçti.
+            Andon'un kovanlarından izole edilen bal mayası HB01'den, toprak ve iklim için geliştirilen yerli suşlara kadar
+            tüm çalışmalarımızı açık veri, patent başvurusu ve resmi onay süreçleriyle belgeliyoruz.
           </p>
         </header>
 
-        <div class="catalogs">
-          <div class="catalogs__group reveal">
-            <h3>DNA Genetik Haritası (16S)</h3>
-            <a class="catalog" href="https://habibkocal.com/katalog/HabibKocal-a11-YAS16s" target="_blank" rel="noopener"><span>11 Yaş Üstü</span><i aria-hidden="true">→</i></a>
-            <a class="catalog" href="https://habibkocal.com/katalog/HabibKocal-a410-YAS16s" target="_blank" rel="noopener"><span>4–10 Yaş Grubu</span><i aria-hidden="true">→</i></a>
-            <a class="catalog" href="https://habibkocal.com/katalog/HabibKocal-HB0116s" target="_blank" rel="noopener"><span>HB01</span><i aria-hidden="true">→</i></a>
+        <dl class="kpis reveal">
+          <div><dt><span data-count="16">16</span> yıl</dt><dd>Bal ve fermantasyon AR-GE'si</dd></div>
+          <div><dt><span data-count="4">4</span></dt><dd>Yerli mikroorganizma suşu</dd></div>
+          <div><dt><span data-count="6">6</span></dt><dd>Açık genetik veri seti (16S · ITS)</dd></div>
+          <div><dt><span data-count="2">2</span></dt><dd>Yayımlanmış patent başvurusu</dd></div>
+        </dl>
+
+        <!-- Süreç -->
+        <h3 class="science__h3 reveal">Kovandan rafa: bilimsel süreç</h3>
+        <ol class="process">
+          <li class="reveal">
+            <span class="process__icon" aria-hidden="true"><svg viewBox="0 0 32 32"><path d="M16 3l11 6.4v12.8L16 28.6 5 22.2V9.4z" fill="none" stroke="currentColor" stroke-width="2"/><path d="M16 11c0 0-4 5-4 8a4 4 0 008 0c0-3-4-8-4-8z" fill="currentColor"/></svg></span>
+            <span class="process__step">01</span>
+            <h4>Kaynak</h4>
+            <p>Rize Andon (Küçükçayır) yaylalarından, 770 m rakımdan kestane balı.</p>
+          </li>
+          <li class="reveal">
+            <span class="process__icon" aria-hidden="true"><svg viewBox="0 0 32 32"><circle cx="13" cy="13" r="8" fill="none" stroke="currentColor" stroke-width="2"/><path d="M19 19l8 8" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/><circle cx="11" cy="11" r="1.6" fill="currentColor"/><circle cx="15" cy="14" r="1.2" fill="currentColor"/></svg></span>
+            <span class="process__step">02</span>
+            <h4>İzolasyon</h4>
+            <p>Baldan yerli maya ve mikroorganizma suşlarının ayrıştırılması: HB01.</p>
+          </li>
+          <li class="reveal">
+            <span class="process__icon" aria-hidden="true"><svg viewBox="0 0 32 32"><path d="M12 4h8M13 4v9l-7 13a2 2 0 002 3h16a2 2 0 002-3l-7-13V4" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M9 22h14" stroke="currentColor" stroke-width="2"/></svg></span>
+            <span class="process__step">03</span>
+            <h4>Fermantasyon</h4>
+            <p>HB01 ile kontrollü fermantasyon; patent başvurusu TR 2020/19009.</p>
+          </li>
+          <li class="reveal">
+            <span class="process__icon" aria-hidden="true"><svg viewBox="0 0 32 32"><path d="M10 3c12 6 0 10 12 16s0 10-12 10M22 3c-12 6 0 10-12 16s0 10 12 10" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>
+            <span class="process__step">04</span>
+            <h4>Genetik analiz</h4>
+            <p>16S ve ITS yeni nesil dizileme (NGS) ile bakteri ve maya profili.</p>
+          </li>
+          <li class="reveal">
+            <span class="process__icon" aria-hidden="true"><svg viewBox="0 0 32 32"><path d="M16 3l3.6 3.4 4.9-.6.9 4.9 4.4 2.3-2.1 4.5 2.1 4.5-4.4 2.3-.9 4.9-4.9-.6L16 29l-3.6-3.4-4.9.6-.9-4.9-4.4-2.3L4.3 17l-2.1-4.5 4.4-2.3.9-4.9 4.9.6z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M11 16l3.5 3.5L21 13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            <span class="process__step">05</span>
+            <h4>Onay</h4>
+            <p>Tarım ve Orman Bakanlığı takviye edici gıda onayı ve açık veri yayını.</p>
+          </li>
+        </ol>
+
+        <!-- Pipeline -->
+        <div class="pipeline-head reveal">
+          <h3 class="science__h3">Ürün &amp; proje hattı</h3>
+          <p>Her çalışmanın bugün hangi aşamada olduğunu şeffafça paylaşıyoruz. Ayrıntı için satıra dokunun.</p>
+        </div>
+        <div class="pipeline reveal" role="table" aria-label="Ürün ve proje hattı">
+          <div class="pipeline__row pipeline__row--head" role="row">
+            <span role="columnheader">Kod · Proje</span>
+            <span role="columnheader">Alan</span>
+            <div class="pipeline__stages" role="columnheader">
+              <span>Keşif</span><span>Laboratuvar</span><span>Pilot / Saha</span><span>Onay &amp; Pazar</span>
+            </div>
           </div>
-          <div class="catalogs__group reveal">
-            <h3>DNA Maya Genetik Haritası (ITS)</h3>
-            <a class="catalog" href="https://habibkocal.com/katalog/Habib-Kocal-a11-YASITS" target="_blank" rel="noopener"><span>11 Yaş Üstü</span><i aria-hidden="true">→</i></a>
-            <a class="catalog" href="https://habibkocal.com/katalog/Habib-Kocal-a410-YASITS" target="_blank" rel="noopener"><span>4–10 Yaş Grubu</span><i aria-hidden="true">→</i></a>
-            <a class="catalog" href="https://habibkocal.com/katalog/Habib-Kocal-HB01ITS" target="_blank" rel="noopener"><span>HB01</span><i aria-hidden="true">→</i></a>
+
+          <details class="pipeline__item" open>
+            <summary class="pipeline__row" role="row">
+              <span class="pipeline__name"><b>HB01</b> Andon Fermente Kestane Balı Şurubu</span>
+              <span class="pipeline__area"><i class="dot dot--honey"></i>Takviye edici gıda</span>
+              <span class="pipeline__bar" style="--stage:4" aria-label="Aşama: Onay ve pazar"><i></i></span>
+            </summary>
+            <div class="pipeline__detail">
+              <dl>
+                <div><dt>Kaynak</dt><dd>Andon kestane balından izole bal mayası</dd></div>
+                <div><dt>Durum</dt><dd>T.E.G. onay 008202 (19.08.2020)</dd></div>
+                <div><dt>Açık veri</dt><dd>16S ve ITS genetik haritaları</dd></div>
+                <div><dt>Patent</dt><dd>TR 2020/19009 A2 (başvuru)</dd></div>
+              </dl>
+            </div>
+          </details>
+
+          <details class="pipeline__item">
+            <summary class="pipeline__row" role="row">
+              <span class="pipeline__name"><b>RK</b> Rize Kahvesi</span>
+              <span class="pipeline__area"><i class="dot dot--coffee"></i>Gıda · içecek</span>
+              <span class="pipeline__bar" style="--stage:3" aria-label="Aşama: Pilot"><i></i></span>
+            </summary>
+            <div class="pipeline__detail">
+              <dl>
+                <div><dt>Kaynak</dt><dd>Rize çayından izole edilen kafein</dd></div>
+                <div><dt>Yöntem</dt><dd>Lactobacillus ile probiyotik işlem</dd></div>
+                <div><dt>Durum</dt><dd>2 yıllık raf ömrü çalışması tamamlandı</dd></div>
+                <div><dt>Hedef</dt><dd>2027 başı piyasaya çıkış</dd></div>
+              </dl>
+            </div>
+          </details>
+
+          <details class="pipeline__item">
+            <summary class="pipeline__row" role="row">
+              <span class="pipeline__name"><b>HB03</b> Toprak probiyotiği</span>
+              <span class="pipeline__area"><i class="dot dot--green"></i>Tarım</span>
+              <span class="pipeline__bar" style="--stage:3" aria-label="Aşama: Pilot ve saha"><i></i></span>
+            </summary>
+            <div class="pipeline__detail">
+              <dl>
+                <div><dt>Hedef</dt><dd>Topraktaki faydalı mikroorganizma dengesi</dd></div>
+                <div><dt>Ön sonuç</dt><dd>Deneme toprağında demir 2,5 → 32 ppm</dd></div>
+                <div><dt>Form</dt><dd>Mikrobiyal gübre</dd></div>
+                <div><dt>Danışman</dt><dd>Prof. Dr. Serkan Naci Koç</dd></div>
+              </dl>
+            </div>
+          </details>
+
+          <details class="pipeline__item">
+            <summary class="pipeline__row" role="row">
+              <span class="pipeline__name"><b>HB010</b> Yağış oluşumu</span>
+              <span class="pipeline__area"><i class="dot dot--blue"></i>İklim · su</span>
+              <span class="pipeline__bar" style="--stage:2" aria-label="Aşama: Laboratuvar"><i></i></span>
+            </summary>
+            <div class="pipeline__detail">
+              <dl>
+                <div><dt>Hedef</dt><dd>Atmosferdeki su buharının yağışa dönüşümünü desteklemek</dd></div>
+                <div><dt>Yaklaşım</dt><dd>Gümüş iyodüre biyolojik alternatif</dd></div>
+                <div><dt>Sonraki adım</dt><dd>Baraj havzalarında saha denemesi</dd></div>
+                <div><dt>Patent</dt><dd>TR 2021/17393 A2 (başvuru)</dd></div>
+              </dl>
+            </div>
+          </details>
+
+          <details class="pipeline__item">
+            <summary class="pipeline__row" role="row">
+              <span class="pipeline__name"><b>HB07</b> Hava mikrobiyomu</span>
+              <span class="pipeline__area"><i class="dot dot--blue"></i>Çevre</span>
+              <span class="pipeline__bar" style="--stage:2" aria-label="Aşama: Laboratuvar"><i></i></span>
+            </summary>
+            <div class="pipeline__detail">
+              <dl>
+                <div><dt>Hedef</dt><dd>Havadaki mikroorganizma dengesinin desteklenmesi</dd></div>
+                <div><dt>Form</dt><dd>Sıvı probiyotik</dd></div>
+                <div><dt>Durum</dt><dd>Laboratuvar aşaması</dd></div>
+                <div><dt>Danışman</dt><dd>Prof. Dr. Serkan Naci Koç</dd></div>
+              </dl>
+            </div>
+          </details>
+
+          <details class="pipeline__item">
+            <summary class="pipeline__row" role="row">
+              <span class="pipeline__name"><b>KB</b> Kapsül Bal</span>
+              <span class="pipeline__area"><i class="dot dot--honey"></i>Gıda</span>
+              <span class="pipeline__bar" style="--stage:3" aria-label="Aşama: Pilot"><i></i></span>
+            </summary>
+            <div class="pipeline__detail">
+              <dl>
+                <div><dt>İçerik</dt><dd>Kestane balı, limon suyu, nane</dd></div>
+                <div><dt>Ambalaj</dt><dd>30 kapsüllük kutu</dd></div>
+                <div><dt>Durum</dt><dd>2015'te seri üretim anlaşması duyuruldu</dd></div>
+                <div><dt>Basın</dt><dd>Sabah, Milliyet, Yeni Akit (2014–2015)</dd></div>
+              </dl>
+            </div>
+          </details>
+        </div>
+
+        <!-- Açık bilim kütüphanesi -->
+        <div class="library-head reveal">
+          <div>
+            <h3 class="science__h3">Açık bilim kütüphanesi</h3>
+            <p>Genetik veri setleri, patent başvuruları ve mevzuat kaynakları; herkesin incelemesine açık.</p>
           </div>
-          <div class="arge-card reveal">
-            <h3>Yerli probiyotik mikroorganizmalar</h3>
-            <p>
-              Rize'nin genetik kaynaklarından elde edilen HB03 (toprak), HB07 (hava) ve HB010 (yağış) suşlarıyla
-              tarım ve kuraklık alanında biyolojik çözümler geliştiriliyor. Danışman: Prof. Dr. Serkan Naci Koç (İÜ-Cerrahpaşa).
-            </p>
+          <div class="library-tools">
+            <label class="sr-only" for="libSearch">Kütüphanede ara</label>
+            <input id="libSearch" type="search" placeholder="Ara: HB01, ITS, patent…" autocomplete="off">
+            <div class="library-filters" role="group" aria-label="Kaynak türü">
+              <button class="lf is-active" data-type="all">Tümü</button>
+              <button class="lf" data-type="veri">Veri seti</button>
+              <button class="lf" data-type="patent">Patent</button>
+              <button class="lf" data-type="mevzuat">Mevzuat</button>
+            </div>
           </div>
+        </div>
+
+        <ul class="library reveal" id="library">
+          <li data-type="veri"><a href="https://habibkocal.com/katalog/HabibKocal-HB0116s" target="_blank" rel="noopener"><span class="badge badge--veri">Veri seti</span><strong>HB01 bal mayası: 16S bakteriyel genetik harita</strong><span class="library__meta">NGS · 16S rRNA · e-katalog</span></a></li>
+          <li data-type="veri"><a href="https://habibkocal.com/katalog/Habib-Kocal-HB01ITS" target="_blank" rel="noopener"><span class="badge badge--veri">Veri seti</span><strong>HB01 bal mayası: ITS maya genetik haritası</strong><span class="library__meta">NGS · ITS · e-katalog</span></a></li>
+          <li data-type="veri"><a href="https://habibkocal.com/katalog/HabibKocal-a11-YAS16s" target="_blank" rel="noopener"><span class="badge badge--veri">Veri seti</span><strong>Andon şurup 11 yaş üstü: 16S genetik harita</strong><span class="library__meta">NGS · 16S rRNA · e-katalog</span></a></li>
+          <li data-type="veri"><a href="https://habibkocal.com/katalog/Habib-Kocal-a11-YASITS" target="_blank" rel="noopener"><span class="badge badge--veri">Veri seti</span><strong>Andon şurup 11 yaş üstü: ITS maya genetik haritası</strong><span class="library__meta">NGS · ITS · e-katalog</span></a></li>
+          <li data-type="veri"><a href="https://habibkocal.com/katalog/HabibKocal-a410-YAS16s" target="_blank" rel="noopener"><span class="badge badge--veri">Veri seti</span><strong>Andon şurup 4–10 yaş: 16S genetik harita</strong><span class="library__meta">NGS · 16S rRNA · e-katalog</span></a></li>
+          <li data-type="veri"><a href="https://habibkocal.com/katalog/Habib-Kocal-a410-YASITS" target="_blank" rel="noopener"><span class="badge badge--veri">Veri seti</span><strong>Andon şurup 4–10 yaş: ITS maya genetik haritası</strong><span class="library__meta">NGS · ITS · e-katalog</span></a></li>
+          <li data-type="patent"><a href="https://patents.google.com/patent/TR202019009A2/tr" target="_blank" rel="noopener"><span class="badge badge--patent">Patent</span><strong>Nano probiyotikler fermente bal mayası</strong><span class="library__meta">TR 2020/19009 A2 · Başvuru 25.11.2020 · Yayın 21.06.2022</span></a></li>
+          <li data-type="patent"><a href="https://patents.google.com/patent/TR2021017393A2/tr" target="_blank" rel="noopener"><span class="badge badge--patent">Patent</span><strong>Sıvı formdaki probiyotiklerin kullanımı</strong><span class="library__meta">TR 2021/17393 A2 · Başvuru 08.11.2021 · Yayın 22.05.2023</span></a></li>
+          <li data-type="mevzuat"><a href="https://www.tarimorman.gov.tr/Konu/1116/takviye_edici_gidalar_kisitli_maddeler_listesi" target="_blank" rel="noopener"><span class="badge badge--mevzuat">Mevzuat</span><strong>Takviye Edici Gıdalar Kısıtlı Maddeler Listesi: Fermente Kestane Balı</strong><span class="library__meta">T.C. Tarım ve Orman Bakanlığı · Yayım 26.06.2020</span></a></li>
+        </ul>
+        <p class="library-empty" id="libEmpty" hidden>Aramanızla eşleşen kaynak bulunamadı.</p>
+
+        <!-- Danışman -->
+        <div class="advisor reveal">
+          <div class="advisor__avatar" aria-hidden="true">SNK</div>
+          <div>
+            <p class="advisor__label">Bilimsel danışman · HB03 · HB07 · HB010</p>
+            <h4>Prof. Dr. Serkan Naci Koç</h4>
+            <p>İstanbul Üniversitesi-Cerrahpaşa, Kimya Mühendisliği Bölümü. Rize doğumlu; kataliz ve enerji alanlarında uluslararası araştırma deneyimi (Ruhr Üniversitesi, MIT).</p>
+          </div>
+          <a class="btn btn--ghost btn--sm" href="https://avesis.iuc.edu.tr/nacik" target="_blank" rel="noopener">Akademik profil ↗</a>
         </div>
       </div>
     </section>
@@ -666,23 +841,7 @@
             <li><strong>HELAL</strong><span>Helal sertifikası</span></li>
           </ul>
         </div>
-        <h3 class="sub-title reveal">Patent başvuruları</h3>
-        <div class="patents">
-          <a class="patent reveal" href="https://patents.google.com/patent/TR202019009A2/tr" target="_blank" rel="noopener">
-            <span class="patent__no">TR 2020/19009 A2</span>
-            <strong>Nano probiyotikler fermente bal mayası</strong>
-            <span class="patent__meta">Başvuru 25.11.2020 · Yayın 21.06.2022</span>
-            <p>Baldan elde edilen mayanın fermantasyonu; şurup, sprey ve gargara formlarında kullanım.</p>
-            <i aria-hidden="true">Google Patents →</i>
-          </a>
-          <a class="patent reveal" href="https://patents.google.com/patent/TR2021017393A2/tr" target="_blank" rel="noopener">
-            <span class="patent__no">TR 2021/17393 A2</span>
-            <strong>Sıvı formdaki probiyotiklerin kullanımı</strong>
-            <span class="patent__meta">Başvuru 08.11.2021 · Yayın 22.05.2023</span>
-            <p>Sıvı probiyotiklerin raf ömrünün uzatılması ve atmosfere uygulanması.</p>
-            <i aria-hidden="true">Google Patents →</i>
-          </a>
-        </div>
+        <p class="cert-note reveal">Patent başvuruları ve genetik veri setleri için <a href="#arge">Açık bilim kütüphanesi</a>ne göz atın.</p>
       </div>
     </section>
 
@@ -714,6 +873,48 @@
           <li class="reveal" data-more><a href="https://www.olay53.com/haber/bal-yedi-hayati-degisti-43945.htm" target="_blank" rel="noopener"><span class="press-list__date"><b>2012</b> Mayıs</span><span class="press-list__outlet">Olay53</span><span class="press-list__title">Andon Mühürlü Çiçek Balı</span><i aria-hidden="true">↗</i></a></li>
         </ol>
         <div class="center"><button class="btn btn--ghost-dark btn--sm" id="pressMore" aria-expanded="false">Tüm arşivi göster</button></div>
+      </div>
+    </section>
+
+    <!-- SSS -->
+    <section class="section" id="sss">
+      <div class="container faq">
+        <header class="faq__head reveal">
+          <p class="eyebrow">Sık sorulan sorular</p>
+          <h2>Merak edilenler</h2>
+          <p>Yanıtını bulamadığınız sorular için bize yazın.</p>
+          <a href="#iletisim" class="btn btn--honey btn--sm">Soru Sorun</a>
+        </header>
+        <div class="faq__list">
+          <details class="reveal">
+            <summary>Takviye edici gıda nedir, ilaç mıdır?</summary>
+            <p>Hayır. Takviye edici gıdalar normal beslenmeyi desteklemek amacıyla üretilen, Tarım ve Orman Bakanlığı denetimindeki gıdalardır. İlaç değildir; hastalıkların önlenmesi veya tedavisi amacıyla kullanılmaz.</p>
+          </details>
+          <details class="reveal">
+            <summary>“Fermente kestane balı” ne demek?</summary>
+            <p>Kestane balının, kendi kovanlarımızdan izole ettiğimiz HB01 bal mayasıyla kontrollü koşullarda fermente edilmesidir. “Fermente Kestane Balı”, Bakanlığın Takviye Edici Gıdalar Kısıtlı Maddeler Listesi'nde 26.06.2020'den bu yana yer alır.</p>
+          </details>
+          <details class="reveal">
+            <summary>HB01 nedir?</summary>
+            <p>Andon kestane balından izole edilen yerli bal mayasıdır. Bakteriyel (16S) ve maya (ITS) genetik haritaları yeni nesil dizileme ile çıkarılmış ve açık veri olarak yayımlanmıştır.</p>
+          </details>
+          <details class="reveal">
+            <summary>Genetik harita (16S / ITS) neyi gösterir?</summary>
+            <p>16S analizi üründeki bakteri topluluğunu, ITS analizi ise maya ve mantar topluluğunu tür düzeyinde gösterir. Bu verileri, ürünlerimizin mikrobiyal içeriğini bilim insanlarının bağımsız olarak inceleyebilmesi için yayımlıyoruz.</p>
+          </details>
+          <details class="reveal">
+            <summary>Andon adı nereden geliyor?</summary>
+            <p>Rize Merkez'e bağlı Küçükçayır köyünün eski adı Andon'dur ve 1876 kayıtlarında bu adla geçer. Habib Koçal'ın bal yolculuğu bu köyde başladı.</p>
+          </details>
+          <details class="reveal">
+            <summary>Ürünleri nereden satın alabilirim?</summary>
+            <p>Ürünler yetkili bayilerimiz ve e-ticaret bayilerimiz aracılığıyla sunulur. Size en yakın satış noktası veya sipariş için WhatsApp ya da telefonla bize ulaşabilirsiniz.</p>
+          </details>
+          <details class="reveal">
+            <summary>Çocuklar için hangi ürün uygundur?</summary>
+            <p>Andon şurubunun 4–10 yaş grubu için ayrı bir formülasyonu vardır. Etiketteki kullanım önerisine uyunuz; çocuklarda kullanmadan önce doktorunuza danışmanızı öneririz. 1 yaşından küçük bebeklere bal içeren ürünler verilmemelidir.</p>
+          </details>
+        </div>
       </div>
     </section>
 
